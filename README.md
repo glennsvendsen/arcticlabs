@@ -6,11 +6,6 @@ Building apps **no one** use since 2025.
 
 Visit: [https://glennsvendsen.github.io](https://glennsvendsen.github.io)
 
-*(Will be available at **arcticlabs.io** once custom domain is configured)*
-
-## Our Work
-
-- **[Equity](https://glennsvendsen.github.io/equity/)** - Time balance tracker for iOS
 
 ## 📦 Deployment
 
