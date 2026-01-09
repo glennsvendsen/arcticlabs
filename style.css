@@ -47,33 +47,33 @@ body {
 .aurora-band {
     position: absolute;
     width: 200%;
-    height: 300px;
-    filter: blur(80px);
-    opacity: 0.4;
-    animation: aurora-wave 15s ease-in-out infinite;
+    height: 400px;
+    filter: blur(100px);
+    animation: aurora-wave 12s ease-in-out infinite;
 }
 
 .aurora-1 {
-    top: -100px;
+    top: -50px;
     left: -50%;
-    background: linear-gradient(90deg, transparent, var(--accent-aurora-1), var(--accent-aurora-2), transparent);
+    background: linear-gradient(90deg, transparent 0%, #60a5fa 20%, #34d399 50%, #60a5fa 80%, transparent 100%);
+    opacity: 0.6;
     animation-delay: 0s;
 }
 
 .aurora-2 {
-    top: -50px;
+    top: 50px;
     left: -30%;
-    background: linear-gradient(90deg, transparent, var(--accent-aurora-3), var(--accent-aurora-1), transparent);
-    animation-delay: -5s;
-    opacity: 0.3;
+    background: linear-gradient(90deg, transparent 0%, #a78bfa 25%, #60a5fa 50%, #34d399 75%, transparent 100%);
+    opacity: 0.4;
+    animation-delay: -4s;
 }
 
 .aurora-3 {
-    top: 0;
+    top: 100px;
     left: -70%;
-    background: linear-gradient(90deg, transparent, var(--accent-aurora-2), var(--accent-aurora-3), transparent);
-    animation-delay: -10s;
-    opacity: 0.25;
+    background: linear-gradient(90deg, transparent 0%, #34d399 30%, #a78bfa 60%, transparent 100%);
+    opacity: 0.35;
+    animation-delay: -8s;
 }
 
 @keyframes aurora-wave {
