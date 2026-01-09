@@ -168,6 +168,7 @@ body {
     background: rgba(56, 189, 248, 0.1);
     animation: shiver 0.3s ease-in-out infinite;
     cursor: default;
+    opacity: 1;
 }
 
 @keyframes shiver {
