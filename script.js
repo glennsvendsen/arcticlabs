@@ -52,8 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
         emoji.style.fontSize = `${Math.random() * 1.5 + 1.5}rem`; // Random size 1.5-3rem
         emoji.style.pointerEvents = 'none';
         emoji.style.zIndex = '9999';
-        emoji.style.transition = 'all 0.8s cubic-bezier(0.25, 1, 0.5, 1)'; // Pop effect
+        // Changed transition: Transform happens fast (0.8s), Opacity fades late
+        emoji.style.transition = 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease-in 0.8s';
         emoji.style.transform = 'translate(-50%, -50%) scale(0)'; // Start hidden
+
+        // Force initial opacity
+        emoji.style.opacity = '1';
 
         document.body.appendChild(emoji);
 
@@ -65,13 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Animate
         requestAnimationFrame(() => {
             emoji.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRotate}deg) scale(1)`;
+            // NOTE: We don't set opacity to 0 here directly anymore because it would start immediately if not for the transition delay.
+            // But to be safe and explicit, let's keep opacity at 1 here, and let CSS transition delay handle the start of the fade to 0.
             emoji.style.opacity = '0';
         });
 
         // Cleanup
         setTimeout(() => {
             emoji.remove();
-        }, 800);
+        }, 1500);
     };
 
     // Add event listeners
